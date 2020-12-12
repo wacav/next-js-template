@@ -16,11 +16,19 @@ class CustomDocument extends Document {
     return (
       <Html lang="ko">
         <Head>
-          <title>김반장웹 - 메인</title>
           <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
           <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
           <meta httpEquiv="Pragma" content="no-cache" />
           <meta httpEquiv="Expires" content="-1" />
+          <meta charSet="UTF-8" />
+          <meta name="format-detection" content="telephone=no" />
+          <meta property="og:type" content="website" />
+          <meta property="og:image" content="" />
+          <meta property="og:title" content="김반장웹" />
+          <meta name="Description" content="김반장웹" />
+          <meta name="Keywords" content="김반장웹,웹김반장" />
+          <meta property="og:url" content="" />
+          <meta property="og:description" content="김반장웹" />
         </Head>
         <body>
           <Main />
