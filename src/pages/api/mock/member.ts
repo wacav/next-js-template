@@ -1,7 +1,7 @@
 import { NextApiHandler } from "next";
 
 // Mock Api Handler
-export const mockMemberData: NextApiHandler = (req, res) => {
+const mockMemberData: NextApiHandler = (req, res) => {
   const authorization = req.headers.authorization;
   const authType = "Bearer ";
   if (
@@ -18,3 +18,4 @@ export const mockMemberData: NextApiHandler = (req, res) => {
     res.status(401).end();
   }
 };
+export default mockMemberData;

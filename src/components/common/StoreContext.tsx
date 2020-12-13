@@ -35,7 +35,7 @@ function initializeStore(member = null) {
   return store;
 }
 
-export const RootStoreProvider = ({ children, member }) => {
+const RootStoreProvider = ({ children, member }) => {
   const store = initializeStore(member);
 
   return (
@@ -46,3 +46,5 @@ export const RootStoreProvider = ({ children, member }) => {
 type RootStoreProvider = React.FC<{
   member: { name: string; level: number; mobile: string };
 }>;
+
+export default RootStoreProvider;

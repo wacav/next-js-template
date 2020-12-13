@@ -1,8 +1,11 @@
+import { useRootStore } from "@components/common/StoreContext";
 import axios from "@utils/axios.util";
+import { observer } from "mobx-react";
 import { GetServerSideProps } from "next";
 
 const MainPage = () => {
-  return <div>111</div>;
+  const root = useRootStore();
+  return <div>{root.member?.name}</div>;
 };
 
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
@@ -11,4 +14,4 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
   return { props: {} };
 };
 
-export default MainPage;
+export default observer(MainPage);

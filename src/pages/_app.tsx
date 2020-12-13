@@ -1,4 +1,4 @@
-import { RootStoreProvider } from "@components/common/StoreContext";
+import RootStoreProvider from "@components/common/StoreContext";
 import config from "@config";
 import { ThemeProvider } from "@emotion/react";
 import axios from "@utils/axios.util";
@@ -34,7 +34,6 @@ App.getInitialProps = async ({ ctx }: AppContext) => {
       try {
         // Mock data
         const { data } = await axios.get("/api/mock/member", {
-          baseURL: "127.0.0.1:3000",
           headers: { authorization: `Bearer ${token}` },
         });
         member = data;
